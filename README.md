@@ -25,6 +25,8 @@ In order for the videos to play on separate screens, autoplay must be enabled on
 ---
 
 ## Setup and Run
+You need to add the videos in the client/public/videos folder from the Gravit8 Sharepoint (Documents > Project Assets > Spirit.fusion) for the app to work correctly.
+
 You will need node installed on your machine.
 
 1. Either recieve this code in a zip file or clone it from the repository. Unzip the folder into a folder on the desktop.
