@@ -1,0 +1,28 @@
+{
+    "name": "spirit-fusion-app",
+    "version": "1.0.0",
+    "description": "## The Setup ### Screen 1 - Display Runs on a computer that is hooked up to the display screen. This screen is not interactable by a user. ### Screen 2 - Controller Runs on an iPad using a kiosk app such as Kiosk+. This screen allows a user to play a video that will also play on that display screen.",
+    "main": "index.js",
+    "scripts": {
+        "dev:client": "npm run start --prefix client",
+        "dev:server": "npm run dev --prefix server",
+        "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+        "start:client": "npm run start --prefix client",
+        "start:server": "npm run start --prefix server",
+        "start": "concurrently \"npm run start:client\" \"npm run start:server\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@gitlab.com/DBPixelhouse/spirit/spirit-fusion-app.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://gitlab.com/DBPixelhouse/spirit/spirit-fusion-app/issues"
+    },
+    "homepage": "https://gitlab.com/DBPixelhouse/spirit/spirit-fusion-app#readme",
+    "dependencies": {
+        "concurrently": "^7.2.2"
+    }
+}

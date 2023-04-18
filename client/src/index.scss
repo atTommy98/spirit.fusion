@@ -1,0 +1,161 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    overscroll-behavior: none;
+    margin: 0;
+    font-family: 'Futura LT';
+}
+
+.display-screen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+
+    video {
+        width: 100vw;
+    }
+}
+
+.controller-screen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+
+    .header {
+        height: 20vh;
+
+        img {
+            width: 30vw;
+            margin: 100px;
+        }
+    }
+
+    .content {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 40px;
+            font-size: 34px;
+        }
+
+        .thumbnail {
+            img {
+                width: 40vw;
+                aspect-ratio: 16/9;
+                margin: 20px 0;
+            }
+        }
+    }
+
+    .video-background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000065;
+
+        .icons {
+            width: 90vw;
+            text-align: right;
+
+            img {
+                width: 60px;
+                margin: 40px;
+            }
+        }
+
+        video {
+            width: 90vw;
+        }
+    }
+
+    video::-webkit-media-controls-volume-slider {
+        display: none;
+    }
+
+    video::-webkit-media-controls-mute-button {
+        display: none;
+    }
+
+    video::-webkit-media-controls-fullscreen-button {
+        display: none;
+    }
+
+    video::-webkit-media-controls-menu-button {
+        display: none;
+    }
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+    width: 90vw;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: all 0.3s ease-in-out;
+
+    img {
+        margin: 0 10px 0 20px;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    input[type='range'] {
+        margin: 0 20px;
+        flex-grow: 1;
+        -webkit-appearance: none !important;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        height: 4px;
+        width: 350px;
+    }
+
+    input[type='range']::-webkit-range-thumb,
+    input[type='range']::-moz-range-thumb {
+        -webkit-appearance: none !important;
+        cursor: pointer;
+        height: 35px;
+        width: 35px;
+        border-radius: 50px;
+        border: none;
+    }
+
+    input[type='range']::-moz-range-progress,
+    input[type='range']::-webkit-progress-value {
+        background: white;
+        height: 5px;
+    }
+}
+
+@font-face {
+    font-family: 'Futura LT';
+    src: url('../public/fonts/FuturaLT.woff2') format('woff2'), url('../public/fonts/FuturaLT.woff') format('woff'), url('../public/fonts/FuturaLT.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
